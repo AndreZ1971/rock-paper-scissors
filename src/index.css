@@ -1,0 +1,243 @@
+/* Globale Stile */
+@font-face {
+    font-family: 'Metalmania';
+    src: url('/fonts/Metalmania-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Metalmania', sans-serif;
+    background-color: #1a1a1a; /* Düsterer Hintergrund */
+    color: #f2f2f2; /* Helle Schriftfarbe für Kontrast */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #202020; /* Noch dunklerer Header */
+    color: #f2f2f2;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  .info-bar {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .menu-btn {
+    background-color: #333333; /* Dunkler Menübutton */
+    color: #ffcc00; /* Akzentfarbe */
+    border: 2px solid #ffcc00;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .menu-btn:hover {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+  }
+  
+  /* Menü */
+  .menu {
+    position: absolute;
+    top: 60px; /* Direkt unter dem Header */
+    left: 10px; /* Nahe am linken Rand */
+    background-color: #2b2b2b; /* Noch düsterer Hintergrund */
+    color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7); /* Starker Schatten */
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    margin-bottom: 15px;
+  }
+  
+  .menu ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .menu ul li a:hover {
+    color: #ffffff;
+  }
+  
+  /* Hauptinhalt */
+  .main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .question-area h1 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+  }
+  
+  .answer-btn {
+    background-color: #333333; /* Düsterer Button */
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+    padding: 12px 24px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%; /* Volle Breite */
+    max-width: 300px; /* Begrenzte maximale Breite */
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .answer-btn:hover {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    transform: scale(1.1);
+  }
+  
+  .button-icon {
+    width: 64px; /* Einheitliche Größe */
+    height: 64px; /* Einheitliche Größe */
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #202020; /* Düsterer Footer */
+    color: #ffcc00;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #ffcc00;
+  }
+  
+  /* Menü-Header für das Schließen */
+  .menu-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    color: #ffcc00;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close-btn:hover {
+    color: #ffffff;
+  }
+  
+  /* Menüpunkt Programm beenden */
+  .exit-btn {
+    background-color: #cc0000; /* Rote Farbe für "Programm beenden" */
+    color: #f2f2f2;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .exit-btn:hover {
+    background-color: #ff4d4d;
+  }
+  
+  /* Menüüberschrift */
+  .menu-title {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+  
+  /* Länderliste */
+  .country-list {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .country-list li {
+    cursor: pointer;
+    margin: 10px 0;
+    color: #ffcc00;
+    transition: color 0.3s;
+  }
+  
+  .country-list li:hover {
+    color: #ffffff; /* Weiß für Hover */
+  }
+  
+  /* Dropdown für Länderauswahl */
+  .country-dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #2b2b2b; /* Dunkler Hintergrund */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .country-dropdown label {
+    color: #ffcc00;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .country-dropdown input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  /* Dropdown für Schwierigkeit */
+  .difficulty-dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #2b2b2b;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .difficulty-dropdown label {
+    color: #ffcc00;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .difficulty-dropdown input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .subjects-dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .subjects-dropdown label {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+   

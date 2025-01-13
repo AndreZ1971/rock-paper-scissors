@@ -1,13 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/thumb.svg" />
+  <script type="module" defer src="/src/main.js"></script>
+  <link rel="stylesheet" href="/src/index.css">
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <!-- Header-Bereich -->
+  <header class="header">
+    <h1 class="text-4xl">Rock Paper Scissors</h1>
+    <div class="info-bar">
+      <span>Score:</span>
+      <span id="score">0</span>
+    </div>
+  </header>
+
+  <!-- Hauptbereich mit Buttons -->
+  <main class="main">
+    <button data-choice="paper" class="answer-btn">
+      <img src="/image/paper.svg" alt="Paper" class="button-icon" />
+    </button>
+    <button data-choice="scissors" class="answer-btn">
+      <img src="/image/scissors.svg" alt="Scissors" class="button-icon" />
+    </button>
+    <button data-choice="rock" class="answer-btn">
+      <img src="/image/rock.svg" alt="Rock" class="button-icon" />
+    </button>
+  </main>
+
+  <!-- Startbildschirm -->
+  <div id="startscreen" class="container bg-gray-900 text-white">
+    <h1 class="text-6xl">Rock</h1>
+    <h2 class="text-5xl">Paper</h2>
+    <h3 class="text-4xl mb-6">Scissors</h3>
+    <button id="startbutton" class="menu-btn">Start Game</button>
+  </div>
+
+  <!-- Regeln -->
+  <div id="rules" class="menu hidden">
+    <div class="menu-header">
+      <button id="closebutton" class="close-btn">&times;</button>
+    </div>
+    <h2 class="menu-title">Rules</h2>
+    <p>Rock Paper Scissors is a game that is played between two players...</p>
+  </div>
+
+  <!-- Ergebnisanzeige -->
+  <div id="results" class="menu hidden">
+    <h3 id="result" class="menu-title">You win</h3>
+    <div>
+      <p>You chose:</p>
+      <div id="userchoice" class="result-icon-container">
+        <img src="/image/placeholder.svg" alt="Your choice" class="result-icon" />
+      </div>
+    </div>
+    <div>
+      <p>Computer chose:</p>
+      <div id="computerchoice" class="result-icon-container">
+        <img src="/image/placeholder.svg" alt="Computer's choice" class="result-icon" />
+      </div>
+    </div>
+    <button id="playagain" class="exit-btn">Play Again</button>
+  </div>
+</body>
+
 </html>
+
